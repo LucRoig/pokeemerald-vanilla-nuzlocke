@@ -90,4 +90,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
+// Move Relearner as an option in the Pokémon Party Screen Ver.2
+void CB2_ReturnToPartyMenuFromSummaryScreen(void);
+
 #endif // GUARD_PARTY_MENU_H

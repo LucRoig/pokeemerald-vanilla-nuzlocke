@@ -25,6 +25,9 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+// Move Relearner as an option in the Pokémon Party Screen Ver.2
+#include "party_menu.h"
+
 /*
  * Move relearner state machine
  * ------------------------
@@ -679,6 +682,7 @@ static void DoMoveRelearnerMain(void)
         if (!gPaletteFade.active)
         {
             FreeMoveRelearnerResources();
+            if (FlagGet(FLAG_TEMP_1)) { CB2_ReturnToPartyMenuFromSummaryScreen(); break;}
             SetMainCallback2(CB2_ReturnToField);
         }
         break;
@@ -706,10 +710,14 @@ static void DoMoveRelearnerMain(void)
             else
             {
                 u16 move = GetMonData(&gPlayerParty[sMoveRelearnerStruct->partyMon], MON_DATA_MOVE1 + sMoveRelearnerStruct->moveSlot);
+                u8 newPP = 0;
 
                 StringCopy(gStringVar3, gMoveNames[move]);
                 RemoveMonPPBonus(&gPlayerParty[sMoveRelearnerStruct->partyMon], sMoveRelearnerStruct->moveSlot);
                 SetMonMoveSlot(&gPlayerParty[sMoveRelearnerStruct->partyMon], GetCurrentSelectedMove(), sMoveRelearnerStruct->moveSlot);
+
+                SetMonData(&gPlayerParty[sMoveRelearnerStruct->partyMon], MON_DATA_PP1 + GetMoveSlotToReplace(), &newPP);
+
                 StringCopy(gStringVar2, gMoveNames[GetCurrentSelectedMove()]);
                 PrintMessageWithPlaceholders(gText_MoveRelearnerAndPoof);
                 sMoveRelearnerStruct->state = MENU_STATE_DOUBLE_FANFARE_FORGOT_MOVE;

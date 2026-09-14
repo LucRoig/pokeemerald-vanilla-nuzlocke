@@ -3026,4 +3026,7 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+// Move Relearner as an option in the Pokémon Party Screen Ver.2
+extern const u8 gText_Relearn_Menu[];
+
 #endif // GUARD_STRINGS_H
