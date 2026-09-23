@@ -255,12 +255,6 @@ PlayersHouse_2F_EventScript_Notebook::
 
 PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
-
-	// TESTING
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CASTFORM
-	givemon SPECIES_CASTFORM, 50, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
