@@ -7,6 +7,7 @@
 #define STRINGID_SWITCHINMON    3
 #define STRINGID_USEDMOVE       4
 #define STRINGID_BATTLEEND      5
+#define STRINGID_NUZLOCKEDUPS   7
 
 // todo: make some of those names less vague: attacker/target vs pkmn, etc.
 #define STRINGID_TRAINER1LOSETEXT           12

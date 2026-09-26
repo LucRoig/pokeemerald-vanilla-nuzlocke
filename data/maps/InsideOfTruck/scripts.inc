@@ -16,8 +16,75 @@ InsideOfTruck_OnResume:
 InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
+
 	/* Setup level cap */
 	setvar VAR_LEVEL_CAP, 15
+
+	/* TESTING START */
+	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_MEW, 14, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_SNORLAX, 14, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_POKENAV_GET 
+	
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	setflag FLAG_SYS_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_DIVE
+
+	setflag FLAG_VISITED_LITTLEROOT_TOWN 
+	setflag FLAG_VISITED_OLDALE_TOWN     
+	setflag FLAG_VISITED_DEWFORD_TOWN    
+	setflag FLAG_VISITED_LAVARIDGE_TOWN  
+	setflag FLAG_VISITED_FALLARBOR_TOWN  
+	setflag FLAG_VISITED_VERDANTURF_TOWN 
+	setflag FLAG_VISITED_PACIFIDLOG_TOWN 
+	setflag FLAG_VISITED_PETALBURG_CITY  
+	setflag FLAG_VISITED_SLATEPORT_CITY  
+	setflag FLAG_VISITED_MAUVILLE_CITY   
+	setflag FLAG_VISITED_RUSTBORO_CITY   
+	setflag FLAG_VISITED_FORTREE_CITY    
+	setflag FLAG_VISITED_LILYCOVE_CITY   
+	setflag FLAG_VISITED_MOSSDEEP_CITY   
+	setflag FLAG_VISITED_SOOTOPOLIS_CITY 
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
+
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+	giveitem ITEM_MASTER_BALL
+
+	/* TESTING END */
+
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
 	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsFemale
@@ -50,58 +117,7 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale::
 	end
 
 InsideOfTruck_EventScript_MovingBox::
-
-	// TESTING
-	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEWTWO
-	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEW
-	givemon SPECIES_MEW, 14, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNORLAX
-	givemon SPECIES_SNORLAX, 14, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	setflag FLAG_SYS_POKEMON_GET
-	
-	/*setflag FLAG_BADGE01_GET
-	setflag FLAG_BADGE02_GET
-	setflag FLAG_BADGE03_GET
-	setflag FLAG_BADGE04_GET
-	setflag FLAG_BADGE05_GET
-	setflag FLAG_BADGE06_GET
-	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET*/
-
-	giveitem ITEM_HM_CUT
-	giveitem ITEM_HM_FLY
-	setflag FLAG_SYS_FLY
-	giveitem ITEM_HM_SURF
-	giveitem ITEM_HM_STRENGTH
-	giveitem ITEM_HM_FLASH
-	giveitem ITEM_HM_ROCK_SMASH
-	giveitem ITEM_HM_WATERFALL
-	giveitem ITEM_HM_DIVE
-
-	setflag FLAG_VISITED_LITTLEROOT_TOWN 
-	setflag FLAG_VISITED_OLDALE_TOWN     
-	setflag FLAG_VISITED_DEWFORD_TOWN    
-	setflag FLAG_VISITED_LAVARIDGE_TOWN  
-	setflag FLAG_VISITED_FALLARBOR_TOWN  
-	setflag FLAG_VISITED_VERDANTURF_TOWN 
-	setflag FLAG_VISITED_PACIFIDLOG_TOWN 
-	setflag FLAG_VISITED_PETALBURG_CITY  
-	setflag FLAG_VISITED_SLATEPORT_CITY  
-	setflag FLAG_VISITED_MAUVILLE_CITY   
-	setflag FLAG_VISITED_RUSTBORO_CITY   
-	setflag FLAG_VISITED_FORTREE_CITY    
-	setflag FLAG_VISITED_LILYCOVE_CITY   
-	setflag FLAG_VISITED_MOSSDEEP_CITY   
-	setflag FLAG_VISITED_SOOTOPOLIS_CITY 
-	setflag FLAG_VISITED_EVER_GRANDE_CITY
-
-	
 	msgbox InsideOfTruck_Text_BoxPrintedWithMonLogo, MSGBOX_SIGN
-
 	end
 
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
