@@ -480,7 +480,11 @@ static void BattleStyle_DrawChoices(u8 selection)
     u8 styles[2];
 
     styles[0] = 0;
-    styles[1] = 0;
+
+    styles[1] = 1;
+    DrawOptionMenuChoice(gText_BattleStyleSet, 104, YPOS_BATTLESTYLE, styles[1]);
+    return;
+
     styles[selection] = 1;
 
     DrawOptionMenuChoice(gText_BattleStyleShift, 104, YPOS_BATTLESTYLE, styles[0]);

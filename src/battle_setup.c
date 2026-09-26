@@ -1281,7 +1281,7 @@ void BattleSetup_StartTrainerBattle(void)
     if (gNoOfApproachingTrainers == 2)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
     else
-        gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
+        gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TRAINER);
 
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
