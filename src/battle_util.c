@@ -3908,6 +3908,10 @@ static bool32 IsBattlerModernFatefulEncounter(u8 battler)
 
 u8 IsMonDisobedient(void)
 {
+    //Poke is always obedient (badge level caps edit)
+    return DISOBEDIENCE_OBEDIENT;
+
+    /*
     s32 rnd;
     s32 calc;
     u8 obedienceLevel = 0;
@@ -4020,5 +4024,7 @@ u8 IsMonDisobedient(void)
             gBattlescriptCurrInstr = BattleScript_MoveUsedLoafingAround;
             return DISOBEDIENCE_IGNORED;
         }
+        
     }
+    */
 }
