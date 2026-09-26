@@ -2561,7 +2561,7 @@ static u8 DisplaySelectionWindow(u8 windowType)
     {
         u8 fontColorsId = 3;
 		if (sPartyMenuInternal->actions[i] >= MENU_FIELD_MOVES) { fontColorsId = 4; }
-		if (sPartyMenuInternal->actions[i] == MENU_RELEARN && !FlagGet(FLAG_TEMP_1)) { fontColorsId = 7; }fontColorsId = (sPartyMenuInternal->actions[i] >= MENU_FIELD_MOVES) ? 4 : 3;
+		if (sPartyMenuInternal->actions[i] == MENU_RELEARN && !FlagGet(FLAG_TEMP_1)) { fontColorsId = 7; }
         AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], FONT_NORMAL, cursorDimension, (i * 16) + 1, letterSpacing, 0, sFontColorTable[fontColorsId], 0, sCursorOptions[sPartyMenuInternal->actions[i]].text);
     }
 
