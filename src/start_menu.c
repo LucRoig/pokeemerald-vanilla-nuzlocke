@@ -335,7 +335,7 @@ static void BuildNormalStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKENAV);
     }
-    if (FlagGet(FLAG_SYS_FLY) == TRUE && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    if (FlagGet(FLAG_BADGE06_GET) == TRUE && FlagGet(FLAG_SYS_FLY) == TRUE && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_FLY);
     }

@@ -16,6 +16,8 @@ InsideOfTruck_OnResume:
 InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
+	/* Setup level cap */
+	setvar VAR_LEVEL_CAP, 15
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
 	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsFemale
@@ -50,18 +52,25 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale::
 InsideOfTruck_EventScript_MovingBox::
 
 	// TESTING
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CASTFORM
-	givemon SPECIES_CASTFORM, 50, ITEM_MYSTIC_WATER
+	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEWTWO
+	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
+	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEW
+	givemon SPECIES_MEW, 14, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	//setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNORLAX
+	givemon SPECIES_SNORLAX, 14, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	setflag FLAG_SYS_POKEMON_GET
 	
-	setflag FLAG_BADGE01_GET
+	/*setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
 	setflag FLAG_BADGE04_GET
 	setflag FLAG_BADGE05_GET
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGE08_GET*/
 
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
