@@ -383,6 +383,8 @@ static void CreateWildMon(u16 species, u8 level)
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
 
+    species = GetRandomSpecies();
+
     switch (gSpeciesInfo[species].genderRatio)
     {
     case MON_MALE:
@@ -964,4 +966,13 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
     if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
         *encRate = *encRate * 2 / 3;
+}
+
+u16 GetRandomSpecies(void)
+{
+    u16 randomSpecies = 1;
+
+    randomSpecies = (Random() % 411) + 1;
+
+    return randomSpecies;
 }
