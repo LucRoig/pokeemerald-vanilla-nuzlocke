@@ -69,6 +69,8 @@
 #include "item.h"
 #include "constants/items.h"
 
+#include "dns.h"
+
 struct CableClubPlayer
 {
     u8 playerId;
@@ -1468,6 +1470,8 @@ void CB1_Overworld(void)
 
 static void OverworldBasic(void)
 {
+    DnsApplyFilters();
+
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();

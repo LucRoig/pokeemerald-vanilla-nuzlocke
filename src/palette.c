@@ -6,6 +6,8 @@
 #include "task.h"
 #include "constants/rgb.h"
 
+#include "dns.h"
+
 enum
 {
     NORMAL_FADE,
@@ -104,7 +106,7 @@ void TransferPlttBuffer(void)
 {
     if (!gPaletteFade.bufferTransferDisabled)
     {
-        DmaCopy16Defvars(3, gPlttBufferFaded, (void *)PLTT, PLTT_SIZE);
+        DnsTransferPlttBuffer(gPlttBufferFaded, (void *)PLTT);
         sPlttBufferTransferPending = FALSE;
         if (gPaletteFade.mode == HARDWARE_FADE && gPaletteFade.active)
             UpdateBlendRegisters();
@@ -190,7 +192,7 @@ bool8 BeginNormalPaletteFade(u32 selectedPalettes, s8 delay, u8 startY, u8 targe
 
         temp = gPaletteFade.bufferTransferDisabled;
         gPaletteFade.bufferTransferDisabled = FALSE;
-        CpuCopy32(gPlttBufferFaded, (void *)PLTT, PLTT_SIZE);
+        TransferPlttBuffer();
         sPlttBufferTransferPending = FALSE;
         if (gPaletteFade.mode == HARDWARE_FADE && gPaletteFade.active)
             UpdateBlendRegisters();
