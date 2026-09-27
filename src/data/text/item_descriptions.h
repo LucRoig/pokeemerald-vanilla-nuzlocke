@@ -498,9 +498,9 @@ static const u8 sRetroMailDesc[] = _(
 
 // Berries
 static const u8 sCheriBerryDesc[] = _(
-    "A hold item that\n"
-    "heals paralysis\n"
-    "in battle.");
+    "Turning this on\n"
+    "gives all in party\n"
+    "EXP. points.");
 
 static const u8 sChestoBerryDesc[] = _(
     "A hold item that\n"

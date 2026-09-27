@@ -27,19 +27,21 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	call Common_EventScript_GetGiftMonPartySlot
 	givemon SPECIES_SNORLAX, 14, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_KADABRA, 20, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
 
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_POKENAV_GET 
 	
-	setflag FLAG_BADGE01_GET
+	/*setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
 	setflag FLAG_BADGE04_GET
 	setflag FLAG_BADGE05_GET
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGE08_GET*/
 
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -82,6 +84,8 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	giveitem ITEM_MASTER_BALL
 	giveitem ITEM_MASTER_BALL
 	giveitem ITEM_MASTER_BALL
+
+	giveitem ITEM_EXP_SHARE
 
 	/* TESTING END */
 
