@@ -94,4 +94,6 @@ void MoveDeleterChooseMoveToForget(void);
 // Move Relearner as an option in the Pokémon Party Screen Ver.2
 void CB2_ReturnToPartyMenuFromSummaryScreen(void);
 
+void ItemUseCB_InfinityCandy(u8 taskId, TaskFunc task);
+
 #endif // GUARD_PARTY_MENU_H

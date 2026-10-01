@@ -23,9 +23,9 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	/* TESTING START */
 	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_MEW, 14, ITEM_MYSTIC_WATER
+	givemon SPECIES_MEW, 13, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_SNORLAX, 14, ITEM_MYSTIC_WATER
+	givemon SPECIES_SNORLAX, 10, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
 	givemon SPECIES_KADABRA, 20, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
@@ -70,22 +70,10 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY 
 	setflag FLAG_VISITED_EVER_GRANDE_CITY
 
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_MASTER_BALL
+	//giveitem ITEM_MASTER_BALL
 
-	giveitem ITEM_EXP_SHARE
+	//giveitem ITEM_EXP_SHARE
+	giveitem ITEM_RARE_CANDY
 
 	/* TESTING END */
 

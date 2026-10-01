@@ -1162,4 +1162,10 @@ void ItemUseOutOfBattle_ExpShare(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_InfinityCandy(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_InfinityCandy;
+    SetUpItemUseCallback(taskId);
+}
+
 #undef tUsingRegisteredKeyItem
