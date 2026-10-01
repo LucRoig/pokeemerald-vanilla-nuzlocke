@@ -34,14 +34,14 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_POKENAV_GET 
 	
-	/*setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
 	setflag FLAG_BADGE04_GET
 	setflag FLAG_BADGE05_GET
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET*/
+	setflag FLAG_BADGE08_GET
 
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
