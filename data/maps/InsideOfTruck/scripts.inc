@@ -23,11 +23,15 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	/* TESTING START */
 	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_MEW, 13, ITEM_MYSTIC_WATER
+	givemon SPECIES_TAUROS, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_SNORLAX, 10, ITEM_MYSTIC_WATER
+	givemon SPECIES_ABRA, 10, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_KADABRA, 20, ITEM_MYSTIC_WATER
+	givemon SPECIES_SLOWPOKE, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_BELLSPROUT, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_HORSEA, 10, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
 
 	setflag FLAG_SYS_POKEMON_GET
@@ -74,6 +78,11 @@ InsideOfTruck_EventScript_SetIntroFlags::
 
 	//giveitem ITEM_EXP_SHARE
 	giveitem ITEM_RARE_CANDY
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
+
+	setvar VAR_PETALBURG_GYM_STATE, 6
 
 	/* TESTING END */
 
