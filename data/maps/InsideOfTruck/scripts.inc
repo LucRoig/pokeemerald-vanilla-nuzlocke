@@ -47,15 +47,15 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
 
-	giveitem ITEM_HM_CUT
+	//giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
 	setflag FLAG_SYS_FLY
-	giveitem ITEM_HM_SURF
-	giveitem ITEM_HM_STRENGTH
-	giveitem ITEM_HM_FLASH
-	giveitem ITEM_HM_ROCK_SMASH
-	giveitem ITEM_HM_WATERFALL
-	giveitem ITEM_HM_DIVE
+	//giveitem ITEM_HM_SURF
+	//giveitem ITEM_HM_STRENGTH
+	//giveitem ITEM_HM_FLASH
+	//giveitem ITEM_HM_ROCK_SMASH
+	//giveitem ITEM_HM_WATERFALL
+	//giveitem ITEM_HM_DIVE
 
 	setflag FLAG_VISITED_LITTLEROOT_TOWN 
 	setflag FLAG_VISITED_OLDALE_TOWN     
@@ -78,11 +78,12 @@ InsideOfTruck_EventScript_SetIntroFlags::
 
 	//giveitem ITEM_EXP_SHARE
 	giveitem ITEM_RARE_CANDY
-	giveitem ITEM_OLD_ROD
-	giveitem ITEM_GOOD_ROD
-	giveitem ITEM_SUPER_ROD
+	//giveitem ITEM_OLD_ROD
+	//giveitem ITEM_GOOD_ROD
+	//giveitem ITEM_SUPER_ROD
 
-	setvar VAR_PETALBURG_GYM_STATE, 6
+	//setvar VAR_PETALBURG_GYM_STATE, 6
+	//setvar VAR_LEVEL_CAP, 22
 
 	/* TESTING END */
 

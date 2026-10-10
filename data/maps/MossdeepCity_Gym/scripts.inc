@@ -64,7 +64,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	msgbox MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_MOSSDEEP_GYM
 	setflag FLAG_BADGE07_GET	
-	setvar VAR_LEVEL_CAP, 46
+	goto_if_lt VAR_LEVEL_CAP, 46, MossdeepCity_Gym_EventScript_LevelCap
 	setflag FLAG_HIDE_AQUA_HIDEOUT_GRUNTS
 	clearflag FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY
 	clearflag FLAG_UNKNOWN_0x393
@@ -88,6 +88,10 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	delay 30
 	setflag FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL
 	release
+	end
+
+MossdeepCity_Gym_EventScript_LevelCap::
+	setvar VAR_LEVEL_CAP, 46
 	end
 
 MossdeepCity_Gym_EventScript_GiveCalmMind2::
