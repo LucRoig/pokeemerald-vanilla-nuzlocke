@@ -24,6 +24,8 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
+#include "random.h"
+
 #define STARTER_MON_COUNT   3
 
 // Position of the sprite of the selected starter Pokémon
@@ -59,6 +61,15 @@ const u32 gBirchGrassTilemap[] = INCGFX_U32("graphics/starter_choose/birch_grass
 const u32 gBirchBagGrass_Gfx[] = INCGFX_U32("graphics/starter_choose/tiles.png", ".4bpp.lz");
 const u32 gPokeballSelection_Gfx[] = INCGFX_U32("graphics/starter_choose/pokeball_selection.png", ".4bpp.lz");
 static const u32 sStarterCircle_Gfx[] = INCGFX_U32("graphics/starter_choose/starter_circle.png", ".4bpp.lz");
+
+static u16 Starter1;
+static u16 Starter2;
+static u16 Starter3;
+
+static const u16 StartingPokes[] =
+{
+    1,4,7,16,29,32,43,60,63,66,69,74,92,116,152,155,158,172,173,179,277,280,
+};
 
 static const struct WindowTemplate sWindowTemplates[] =
 {
@@ -347,12 +358,48 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
     .callback = SpriteCB_StarterPokemon
 };
 
+void CreateRandomStarters()
+{
+    u16 randomSpecies = 1;
+
+    randomSpecies = StartingPokes[Random() % 22];
+    while(randomSpecies <= 0)
+        randomSpecies = StartingPokes[Random() % 22];
+    Starter1 = randomSpecies;
+
+    randomSpecies = StartingPokes[Random() % 22];
+    while(randomSpecies <= 0 && randomSpecies!=Starter1)
+        randomSpecies = StartingPokes[Random() % 22];
+    Starter2 = randomSpecies;
+
+    randomSpecies = StartingPokes[Random() % 22];
+    while(randomSpecies <= 0 && randomSpecies!=Starter1 && randomSpecies!=Starter2)
+        randomSpecies = StartingPokes[Random() % 22];
+    Starter3 = randomSpecies;
+}
+
 // .text
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
-    if (chosenStarterId > STARTER_MON_COUNT)
+    switch (chosenStarterId)
+    {
+    case 0:
+        return Starter1;
+        break;
+    case 1:
+        return Starter2;
+        break;
+    case 2:
+        return Starter3;
+        break;
+    default:
+        return Starter1;
+        break;
+    }
+    /*if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
     return sStarterMon[chosenStarterId];
+    */
 }
 
 static void VblankCB_StarterChoose(void)
@@ -375,6 +422,8 @@ void CB2_ChooseStarter(void)
 {
     u8 taskId;
     u8 spriteId;
+
+    CreateRandomStarters();
 
     SetVBlankCallback(NULL);
 

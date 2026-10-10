@@ -1278,7 +1278,9 @@ void ClearTrainerFlag(u16 trainerId)
 void BattleSetup_StartTrainerBattle(void)
 {
     gNuzlockeCannotCatch = HasWildPokmnOnThisRouteBeenSeen(GetCurrentRegionMapSectionId(), FALSE);
-    if (gNoOfApproachingTrainers == 2)
+    if(!FlagGet(FLAG_SYS_POKEDEX_GET))
+        gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
+    else if (gNoOfApproachingTrainers == 2)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
     else
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TRAINER);
