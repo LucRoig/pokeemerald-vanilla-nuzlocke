@@ -21,7 +21,7 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setvar VAR_LEVEL_CAP, 15
 
 	/* TESTING START */
-	givemon SPECIES_MEWTWO, 100, ITEM_MYSTIC_WATER
+	givemon SPECIES_CLOYSTER, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
 	givemon SPECIES_TAUROS, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot

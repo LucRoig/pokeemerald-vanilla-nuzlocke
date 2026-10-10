@@ -74,6 +74,21 @@ static const u16 sRoute119WaterTileData[] =
     92, 139,  NUM_FISHING_SPOTS_1 + NUM_FISHING_SPOTS_2,
 };
 
+static const u16 FirstEvoPokes[] =
+{
+    1,4,7,10,13,16,19,21,23,27,29,32,37,41,43,46,48,50,52,54,56,58,60,63,66,69,72,74,77,79,81,83,84,86,88,90,92,95,96,98,100,102,
+    104,108,109,111,113,114,115,116,118,120,122,123,127,128,129,131,133,137,138,140,142,143,147,152,155,158,161,163,165,167,
+    170,172,173,174,175,177,179,185,187,190,191,193,194,198,200,203,204,206,207,209,211,213,214,215,216,218,220,222,223,225,226,
+    227,228,231,234,235,236,238,239,240,241,246,277,280,283,286,288,290,295,298,301,304,306,308,309,311,313,315,317,318,320,321,
+    322,323,325,326,328,330,332,335,337,339,341,344,346,348,349,350,351,353,354,355,356,358,360,361,363,364,367,369,370,373,376,
+    377,379,380,381,382,385,386,387,388,390,392,395,411,
+};
+
+static const u16 LegendPokes[] =
+{
+    144,145,146,150,151,243,244,245,249,250,251,376,377,378,379,382,383,384,380,381,385,386,
+};
+
 void DisableWildEncounters(bool8 disabled)
 {
     sWildEncountersDisabled = disabled;
@@ -383,7 +398,7 @@ static void CreateWildMon(u16 species, u8 level)
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
 
-    species = GetRandomSpecies();
+    species = GetRandomFirstEvoSpecies();
 
     switch (gSpeciesInfo[species].genderRatio)
     {
@@ -968,11 +983,26 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
         *encRate = *encRate * 2 / 3;
 }
 
-u16 GetRandomSpecies(void)
+u16 GetRandomFirstEvoSpecies(void)
 {
     u16 randomSpecies = 1;
 
-    randomSpecies = (Random() % 411) + 1;
+    if(gMapHeader.mapLayoutId == LAYOUT_VICTORY_ROAD_1F
+    || gMapHeader.mapLayoutId == LAYOUT_VICTORY_ROAD_B1F
+    || gMapHeader.mapLayoutId == LAYOUT_VICTORY_ROAD_B2F)
+    {
+        randomSpecies = LegendPokes[Random() % 22];
+    while(randomSpecies <= 0)
+        randomSpecies = LegendPokes[Random() % 22];
+    }
+    else
+    {
+
+    randomSpecies = FirstEvoPokes[Random() % 178];
+    while(randomSpecies <= 0)
+        randomSpecies = FirstEvoPokes[Random() % 178];
+
+    }
 
     return randomSpecies;
 }
