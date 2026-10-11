@@ -249,13 +249,6 @@ TrainerHill_Entrance_Pokemart_Basic:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_X_ACCURACY
 	pokemartlistend
 
 TrainerHill_Entrance_EventScript_ExpandedPokemart::
@@ -271,13 +264,6 @@ TrainerHill_Entrance_Pokemart_Expanded:
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_X_ACCURACY
 	pokemartlistend
 
 TrainerHill_Entrance_Text_StillGettingReady:

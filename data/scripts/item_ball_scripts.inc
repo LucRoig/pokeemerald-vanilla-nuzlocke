@@ -3,7 +3,7 @@ Route102_EventScript_ItemPotion::
 	end
 
 Route103_EventScript_ItemGuardSpec::
-	finditem ITEM_GUARD_SPEC
+	finditem ITEM_MAX_REPEL
 	end
 
 Route103_EventScript_ItemPPUp::
@@ -19,7 +19,7 @@ Route104_EventScript_ItemPokeBall::
 	end
 
 Route104_EventScript_ItemXAccuracy::
-	finditem ITEM_X_ACCURACY
+	finditem ITEM_MAX_REPEL
 	end
 
 Route104_EventScript_ItemPotion::
@@ -51,7 +51,7 @@ Route110_EventScript_ItemRareCandy::
 	end
 
 Route110_EventScript_ItemDireHit::
-	finditem ITEM_DIRE_HIT
+	finditem ITEM_MAX_REPEL
 	end
 
 Route110_EventScript_ItemElixir::
@@ -127,7 +127,7 @@ Route115_EventScript_ItemPPUp::
 	end
 
 Route116_EventScript_ItemXSpecial::
-	finditem ITEM_X_SPECIAL
+	finditem ITEM_MAX_REPEL
 	end
 
 Route116_EventScript_ItemEther::
@@ -311,11 +311,11 @@ PetalburgCity_EventScript_ItemEther::
 	end
 
 MauvilleCity_EventScript_ItemXSpeed::
-	finditem ITEM_X_SPEED
+	finditem ITEM_MAX_REPEL
 	end
 
 RustboroCity_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFEND
+	finditem ITEM_MAX_REPEL
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel::
@@ -327,7 +327,7 @@ MossdeepCity_EventScript_ItemNetBall::
 	end
 
 PetalburgWoods_EventScript_ItemXAttack::
-	finditem ITEM_X_ATTACK
+	finditem ITEM_MAX_REPEL
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall::
