@@ -22,10 +22,8 @@ InsideOfTruck_EventScript_SetIntroFlags::
 
 	giveitem ITEM_RARE_CANDY
 
-
-
 	/* TESTING START */
-
+	/*
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
@@ -52,7 +50,7 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_VISITED_MOSSDEEP_CITY   
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY 
 	setflag FLAG_VISITED_EVER_GRANDE_CITY
-	
+
 	givemon SPECIES_TAUROS, 100, ITEM_MYSTIC_WATER
 	call Common_EventScript_GetGiftMonPartySlot
 
