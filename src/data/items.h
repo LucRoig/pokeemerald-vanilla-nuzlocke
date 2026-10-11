@@ -861,8 +861,9 @@ const struct Item gItems[] =
     {
         .name = _("ENDLESS CANDY"),
         .itemId = ITEM_RARE_CANDY,
-        .price = 4800,
+        .price = 0,
         .description = sRareCandyDesc,
+        .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,

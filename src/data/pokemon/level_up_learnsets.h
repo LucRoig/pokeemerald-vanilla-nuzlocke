@@ -825,8 +825,8 @@ static const u16 sPoliwrathLevelUpLearnset[] = {
 };
 
 static const u16 sAbraLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 1, MOVE_TELEPORT),
-    LEVEL_UP_MOVE( 5, MOVE_CONFUSION),
     LEVEL_UP_END
 };
 
@@ -3878,9 +3878,9 @@ static const u16 sLudicoloLevelUpLearnset[] = {
 };
 
 static const u16 sSeedotLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_BIDE),
     LEVEL_UP_MOVE( 3, MOVE_HARDEN),
-    LEVEL_UP_MOVE( 5, MOVE_POUND),
     LEVEL_UP_MOVE( 7, MOVE_GROWTH),
     LEVEL_UP_MOVE(13, MOVE_NATURE_POWER),
     LEVEL_UP_MOVE(21, MOVE_SYNTHESIS),
@@ -5318,8 +5318,8 @@ static const u16 sArmaldoLevelUpLearnset[] = {
 };
 
 static const u16 sRaltsLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
-    LEVEL_UP_MOVE( 5, MOVE_TACKLE),
     LEVEL_UP_MOVE( 6, MOVE_CONFUSION),
     LEVEL_UP_MOVE(11, MOVE_DOUBLE_TEAM),
     LEVEL_UP_MOVE(16, MOVE_TELEPORT),

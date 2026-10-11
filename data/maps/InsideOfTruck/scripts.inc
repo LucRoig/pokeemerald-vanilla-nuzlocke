@@ -22,24 +22,10 @@ InsideOfTruck_EventScript_SetIntroFlags::
 
 	giveitem ITEM_RARE_CANDY
 
-	/* TESTING START */
-	/*givemon SPECIES_CLOYSTER, 100, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_TAUROS, 100, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_ABRA, 10, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_SLOWPOKE, 10, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_BELLSPROUT, 10, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
-	givemon SPECIES_HORSEA, 10, ITEM_MYSTIC_WATER
-	call Common_EventScript_GetGiftMonPartySlot
 
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_SYS_POKENAV_GET 
-	
+
+	/* TESTING START */
+
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
@@ -48,17 +34,8 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
-
-	//giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
 	setflag FLAG_SYS_FLY
-	//giveitem ITEM_HM_SURF
-	//giveitem ITEM_HM_STRENGTH
-	//giveitem ITEM_HM_FLASH
-	//giveitem ITEM_HM_ROCK_SMASH
-	//giveitem ITEM_HM_WATERFALL
-	//giveitem ITEM_HM_DIVE
-
 	setflag FLAG_VISITED_LITTLEROOT_TOWN 
 	setflag FLAG_VISITED_OLDALE_TOWN     
 	setflag FLAG_VISITED_DEWFORD_TOWN    
@@ -75,6 +52,33 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_VISITED_MOSSDEEP_CITY   
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY 
 	setflag FLAG_VISITED_EVER_GRANDE_CITY
+	
+	givemon SPECIES_TAUROS, 100, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+
+	/*givemon SPECIES_CLOYSTER, 100, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_ABRA, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_SLOWPOKE, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_BELLSPROUT, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+	givemon SPECIES_HORSEA, 10, ITEM_MYSTIC_WATER
+	call Common_EventScript_GetGiftMonPartySlot
+
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_POKENAV_GET 
+
+	//giveitem ITEM_HM_CUT
+	//giveitem ITEM_HM_SURF
+	//giveitem ITEM_HM_STRENGTH
+	//giveitem ITEM_HM_FLASH
+	//giveitem ITEM_HM_ROCK_SMASH
+	//giveitem ITEM_HM_WATERFALL
+	//giveitem ITEM_HM_DIVE
+
 
 	//giveitem ITEM_MASTER_BALL
 
