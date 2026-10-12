@@ -367,7 +367,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	setflag FLAG_BADGE05_GET
-	goto_if_lt VAR_LEVEL_CAP, 33, PetalburgCity_Gym_EventScript_LevelCap
+	call_if_lt VAR_LEVEL_CAP, 33, PetalburgCity_Gym_EventScript_LevelCap
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
@@ -393,7 +393,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 
 PetalburgCity_Gym_EventScript_LevelCap::
 	setvar VAR_LEVEL_CAP, 33
-	end
+	return
 
 PetalburgCity_Gym_EventScript_GiveFacade::
 	giveitem ITEM_TM_FACADE

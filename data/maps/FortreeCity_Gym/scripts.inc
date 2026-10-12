@@ -32,7 +32,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_FORTREE_GYM
 	setflag FLAG_BADGE06_GET
-	goto_if_lt VAR_LEVEL_CAP, 42, FortreeCity_Gym_EventScript_LevelCap
+	call_if_lt VAR_LEVEL_CAP, 42, FortreeCity_Gym_EventScript_LevelCap
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
@@ -51,7 +51,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 
 FortreeCity_Gym_EventScript_LevelCap::
 	setvar VAR_LEVEL_CAP, 42
-	end
+	return
 
 FortreeCity_Gym_EventScript_GiveAerialAce2::
 	giveitem ITEM_TM_AERIAL_ACE

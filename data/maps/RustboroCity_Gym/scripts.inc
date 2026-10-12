@@ -17,7 +17,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	msgbox RustboroCity_Gym_Text_StoneBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_RUSTBORO_GYM
 	setflag FLAG_BADGE01_GET
-	goto_if_lt VAR_LEVEL_CAP, 19, RustboroCity_Gym_EventScript_LevelCap
+	call_if_lt VAR_LEVEL_CAP, 19, RustboroCity_Gym_EventScript_LevelCap
 	setvar VAR_RUSTBORO_CITY_STATE, 1
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setvar VAR_0x8008, 1
@@ -28,7 +28,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 
 RustboroCity_Gym_EventScript_LevelCap::
 	setvar VAR_LEVEL_CAP, 19
-	end
+	return
 
 RustboroCity_Gym_EventScript_GiveRockTomb::
 	giveitem ITEM_TM_ROCK_TOMB

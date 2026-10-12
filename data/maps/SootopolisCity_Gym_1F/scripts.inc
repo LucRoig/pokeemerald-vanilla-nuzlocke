@@ -95,7 +95,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_SOOTOPOLIS_GYM
 	setflag FLAG_BADGE08_GET	
-	goto_if_lt VAR_LEVEL_CAP, 58, SootopolisCity_Gym_EventScript_LevelCap
+	call_if_lt VAR_LEVEL_CAP, 58, SootopolisCity_Gym_EventScript_LevelCap
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
@@ -117,7 +117,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 
 SootopolisCity_Gym_EventScript_LevelCap::
 	setvar VAR_LEVEL_CAP, 58
-	end
+	return
 
 SootopolisCity_Gym_1F_EventScript_GiveWaterPulse::
 	giveitem ITEM_TM_WATER_PULSE

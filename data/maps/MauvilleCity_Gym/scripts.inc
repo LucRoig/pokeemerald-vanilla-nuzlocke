@@ -92,7 +92,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
-	goto_if_lt VAR_LEVEL_CAP, 29, MauvilleCity_Gym_EventScript_LevelCap
+	call_if_lt VAR_LEVEL_CAP, 29, MauvilleCity_Gym_EventScript_LevelCap
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
@@ -114,7 +114,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 
 MauvilleCity_Gym_EventScript_LevelCap::
 	setvar VAR_LEVEL_CAP, 29
-	end
+	return
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::
 	giveitem ITEM_TM_SHOCK_WAVE
