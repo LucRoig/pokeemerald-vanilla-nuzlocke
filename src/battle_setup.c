@@ -2229,6 +2229,7 @@ u8 HasWildPokmnOnThisRouteBeenSeen(u8 currLocation, bool8 setVarForThisEnc)
         return 0;
     }
     varValue = VarGet(pkmnSeenVars[varToCheck]);
+
     if ((varValue & (1 << bitToCheck)) != 0){
         return 1;
     }
@@ -2239,7 +2240,8 @@ u8 HasWildPokmnOnThisRouteBeenSeen(u8 currLocation, bool8 setVarForThisEnc)
         {
             return 2;  // If it's a duplicate Pokemon
         }
-        VarSet(pkmnSeenVars[varToCheck], varValue | (1 << bitToCheck));
+        else
+            VarSet(pkmnSeenVars[varToCheck], varValue | (1 << bitToCheck));
     }
     return 0;
 }
